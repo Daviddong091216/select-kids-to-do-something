@@ -25,4 +25,9 @@ export class KidsComponent implements OnInit {
       this.crew.push(person)
     }
   }
+  changeMissionName(name: string){
+    this.missionName = name;
+    return false;
+ }
+
 }
