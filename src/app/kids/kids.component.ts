@@ -21,7 +21,7 @@ export class KidsComponent implements OnInit {
   }
 
   addToCrew(person : object){
-    if(person.name!=null && !this.crew.includes(person)){
+    if(!this.crew.includes(person)){
       this.crew.push(person)
     }
   }

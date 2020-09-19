@@ -30,19 +30,19 @@
                 <li *ngFor="let member of crew">{{member.name}}</li>
             </ul>
                 <div *ngIf="crew.length>0" >
-                <button (click)="crew=[]">Clear Crew List</button>
+                <button (click)="crew=[]">Clear Selected List</button>
         </div>
             
     </div>
     <hr>
     <div class = 'centered'>
         <button (click)="selected=false">Clear Data & Image</button>
-        <button *ngIf="selected && !crew.includes(selected) && crew.length < 3" (click)="addToCrew(selected)">Send on Mission</button>
+        <button *ngIf="selected && !crew.includes(selected) && crew.length < 3" (click)="addToCrew(selected)">Send on Selected List</button>
     </div>
 </div>
 <ng-template #editMission>
     <h2 class="centered">
-        Mission Name:
+        Select kid to do:
         <!-- Add a keyup.enter event that calls the changeMissionName function. -->
         <input #newName (keyup.enter)="editMissionName = changeMissionName(newName.value)" type="text"/>
     </h2>
