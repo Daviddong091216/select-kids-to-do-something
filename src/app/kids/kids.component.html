@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 class="centered" >Select kid to do: {{missionName}}</h2>
+    <br>
+    <div class="row justify-content-center">
+        <div class="kids col-3">
+            <h2>Kids</h2>
+            <ol>
+                <li  *ngFor="let kid of kids" >{{kid.name}}</li>
+            </ol>
+        </div>
+    
+        <div class="data col-3">
+            <h2>Kid Data</h2>
+            
+        </div>
+    
+        <div class="centered col-3">
+            <h2>Sidekick</h2>
+            
+        </div>
+
+        <div class="crew col-3">
+            <h2>Selected Kid</h2>
+            
+        </div>
+            
+    </div>
+    <hr>
+    <div class = 'centered'>
+        <button >Clear Data & Image</button>
+        
+    </div>
+</div>
