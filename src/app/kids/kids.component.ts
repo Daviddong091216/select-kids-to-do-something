@@ -14,9 +14,15 @@ export class KidsComponent implements OnInit {
     {name: 'Miley', data: {age: 8, mass: '30 kg', sidekick: 'Emily'}, image: 'assets/images/Emily.png'},
     {name: 'Aaron', data: {age: 4, mass: '10 kg', sidekick: 'Mike'}, image: 'assets/images/Mike.png'}
   ];
+  crew=[];
   constructor() { }
 
   ngOnInit() {
   }
 
+  addToCrew(person : object){
+    if(person.name!=null && !this.crew.includes(person)){
+      this.crew.push(person)
+    }
+  }
 }
