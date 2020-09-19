@@ -5,13 +5,15 @@
         <div class="kids col-3">
             <h2>Kids</h2>
             <ol>
-                <li  *ngFor="let kid of kids" >{{kid.name}}</li>
+                <li (click)="selected=kid" *ngFor="let kid of kids" >{{kid.name}}</li>
             </ol>
         </div>
     
         <div class="data col-3">
             <h2>Kid Data</h2>
-            
+            <p>
+                {{selected.name}}              
+            </p>
         </div>
     
         <div class="centered col-3">
